@@ -15,7 +15,7 @@ shadow.onload = () => {
         32
     );
 };
-shadow.src = "/src/public/assets/img/png/characters/shadow.png";
+shadow.src = "./src/public/assets/img/png/characters/shadow.png";
 
 const hero = new Image();
 hero.onload = () => {
@@ -31,4 +31,4 @@ hero.onload = () => {
         32
     );
 };
-hero.src = "/src/public/assets/img/png/characters/people/hero.png";
+hero.src = "./src/public/assets/img/png/characters/people/hero.png";

@@ -17,7 +17,7 @@ class Overworld {
                 0,  // Top cut.
             );
         };
-        image.src = "/src/public/assets/img/png/maps/DemoLower.png";
+        image.src = "./src/public/assets/img/png/maps/DemoLower.png";
 
         // Place some game object!
         const hero = new GameObject({
@@ -28,7 +28,7 @@ class Overworld {
         const npc1 = new GameObject({
               x:7,
               y:9,
-            src:"/src/public/assets/img/png/characters/people/npc1.png"
+            src:"./src/public/assets/img/png/characters/people/npc1.png"
         });
 
         setTimeout(() => {
