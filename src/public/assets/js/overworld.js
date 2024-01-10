@@ -24,6 +24,7 @@ class Overworld {
                 // object.x += 1;
                 object.update({
                     arrow:this.directionInput.direction,
+                      map:this.map,
                 });
             });
 
@@ -61,6 +62,14 @@ class Overworld {
         
         // console.log("Hello from the 'Overworld'.", this);
         this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
+        this.map.mountObjects();
+        /**
+         * 112, 96:true,
+         * 112,112:true,
+         * 128, 96:true,
+         * 128,112:true
+         */
+        // console.log(this.map.walls);
         this.directionInput = new DirectionsInput();
         this.directionInput.init();
         this.directionInput.direction; // "down"
