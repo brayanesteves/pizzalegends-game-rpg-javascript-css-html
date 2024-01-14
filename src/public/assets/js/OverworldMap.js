@@ -163,10 +163,10 @@ window.OverworldMaps = {
                 { type: "walk", direction: "down", },
               ],
             }),*/
-            npcB:new Person({
+            npcC:new Person({
                 x:utils.withGrid(8),
                 y:utils.withGrid(5),
-              src:"./src/public/assets/img/png/characters/people/npc2.png",
+              src:"./src/public/assets/img/png/characters/people/npc3.png",
             }),
         },
         walls: {
@@ -180,10 +180,10 @@ window.OverworldMaps = {
             [utils.asGridCoord(7, 4)]: [
                 {
                     events: [
-                        { who:"npcB", type: "walk", direction:"left", },
-                        { who:"npcB", type:"stand", direction:  "up", time:500, },
+                        { who:"npcC", type: "walk", direction:"left", },
+                        { who:"npcC", type:"stand", direction:  "up", time:500, },
                         {             type:"textMessage", text:"You can't be in there!", },
-                        { who:"npcB", type: "walk", direction:  "right", time:500, },
+                        { who:"npcC", type: "walk", direction:  "right", time:500, },
 
                         { who:"hero", type:"walk", direction:  "up", },
                         { who:"hero", type:"walk", direction:"left", },
@@ -209,14 +209,14 @@ window.OverworldMaps = {
                                  x:utils.withGrid(3),
                                  y:utils.withGrid(5),
             }),            
-            npcA:new Person({
+            npcC:new Person({
                   x:utils.withGrid(9),
                   y:utils.withGrid(6),
-                src:"./src/public/assets/img/png/characters/people/npc2.png",
+                src:"./src/public/assets/img/png/characters/people/npc3.png",
                 talking:[
                     {
                         events:[
-                            { type:"textMessage", text:"You made it!", faceHero:"npcB", },
+                            { type:"textMessage", text:"You made it!", faceHero:"npcC", },
                         ],
                     },
                 ],

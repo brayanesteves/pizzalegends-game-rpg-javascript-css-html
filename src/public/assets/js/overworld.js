@@ -93,7 +93,8 @@ class Overworld {
     init() {
         
         // console.log("Hello from the 'Overworld'.", this);
-        this.startMap(window.OverworldMaps.DemoRoom);
+        // this.startMap(window.OverworldMaps.DemoRoom);
+        this.startMap(window.OverworldMaps.Kitchen);
 
         this.bindActionInput();
         this.bindHeroPositionCheck();
@@ -110,31 +111,32 @@ class Overworld {
         // this.directionInput.direction; // "down"
         this.startGameLoop();
 
-        /*this.map.startCutscene([
+        this.map.startCutscene([
 
             // <HERO> //
-            { who:"hero", type:"walk", direction:"down", },
-            { who:"hero", type:"walk", direction:"down", },
+            // { who:"hero", type:"walk", direction:"down", },
+            // { who:"hero", type:"walk", direction:"down", },
             // { who:"hero", type:"walk", direction:"down", },
             // <.HERO> //
             
             // <NPC A> //
-            { who:"npcA", type: "walk", direction:"up", },
-            { who:"npcA", type: "walk", direction:"left", },
+            // { who:"npcA", type: "walk", direction:"up", },
+            // { who:"npcA", type: "walk", direction:"left", },
             // { who:"npcA", type: "walk", direction:"left", },
             // { who:"npcA", type: "walk", direction:"left", },
             // { who:"npcA", type:"stand", direction:  "up", time:800, },
             // <.NPC A> //
 
             // <HERO> //
-            { who:"hero", type:"stand", direction:"right", time:200, },
+            // { who:"hero", type:"stand", direction:"right", time:200, },
             // <.HERO> //
 
             // <TEXT MESSAGE> //
-            { type:"textMessage", text:"WHY HELLO THERE!" },
+            // { type:"textMessage", text:"WHY HELLO THERE!" },
+            { type:"textMessage", text:"This is the very first message!" },
             // <.TEXT MESSAGE> //
 
-        ]);*/
+        ]);
 
     }
 }
