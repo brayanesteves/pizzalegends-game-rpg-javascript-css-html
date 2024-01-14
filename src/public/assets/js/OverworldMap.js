@@ -163,10 +163,10 @@ window.OverworldMaps = {
                 { type: "walk", direction: "down", },
               ],
             }),*/
-            npcC:new Person({
+            npcB:new Person({
                 x:utils.withGrid(8),
                 y:utils.withGrid(5),
-              src:"./src/public/assets/img/png/characters/people/npc3.png",
+              src:"./src/public/assets/img/png/characters/people/npc2.png",
             }),
         },
         walls: {

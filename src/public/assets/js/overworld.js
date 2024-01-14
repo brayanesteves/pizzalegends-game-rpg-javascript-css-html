@@ -131,9 +131,13 @@ class Overworld {
             // { who:"hero", type:"stand", direction:"right", time:200, },
             // <.HERO> //
 
+            // <CHANGE MAP> //
+            { type:"changeMap", map:"DemoRoom" },
+            // <.CHANGE MAP> //
+
             // <TEXT MESSAGE> //
             // { type:"textMessage", text:"WHY HELLO THERE!" },
-            { type:"textMessage", text:"This is the very first message!" },
+            // { type:"textMessage", text:"This is the very first message!" },
             // <.TEXT MESSAGE> //
 
         ]);
