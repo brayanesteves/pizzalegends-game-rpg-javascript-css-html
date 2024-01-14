@@ -3,15 +3,17 @@ class DirectionsInput {
         this.heldDirections = [];
 
         this.map = {
-               "ArrowUp":"up",
-             "ArrowDown":"down",
-             "ArrowLeft":"left",
-            "ArrowRight":"right",
+            "ArrowUp":"up",
+               "KeyW":"up",
 
-            "KeyW":"up",
-            "KeyS":"down",
-            "KeyA":"left",
-            "KeyD":"right",
+            "ArrowDown":"down",
+                 "KeyS":"down",
+
+            "ArrowLeft":"left",
+                 "KeyA":"left",
+
+            "ArrowRight":"right",
+                  "KeyD":"right",
         }
     }
 
@@ -30,7 +32,7 @@ class DirectionsInput {
         });
         document.addEventListener('keyup', (e) => {
             // console.log(e.code);
-            const dir = this.map[e.code];
+            const dir   = this.map[e.code];
             const index = this.heldDirections.indexOf(dir);
             if(index > -1) {
                 this.heldDirections.splice(index, 1);

@@ -67,11 +67,37 @@ class Overworld {
 
     }
 
+    bindActionInput() {
+        new KeyPressListener("Enter", () => {
+            // Is there a person here to talk to?
+            this.map.checkForActionCutscene();
+        });
+    }
+
+    bindHeroPositionCheck() {
+        document.addEventListener("PersonWalkingComplete", (e) => {
+            if(e.detail.whoId === "hero") {
+                // Her's position has changed.
+                // console.log("NEW HERO POS!");
+                this.map.checkForFootstepCutscene();
+            }
+        });
+    }
+
+    startMap(mapConfig) {
+        this.map           = new OverworldMap(mapConfig);
+        this.map.overworld = this;
+        this.map.mountObjects();
+    }
+
     init() {
         
         // console.log("Hello from the 'Overworld'.", this);
-        this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
-        this.map.mountObjects();
+        this.startMap(window.OverworldMaps.DemoRoom);
+
+        this.bindActionInput();
+        this.bindHeroPositionCheck();
+
         /**
          * 112, 96:true,
          * 112,112:true,
@@ -83,19 +109,32 @@ class Overworld {
         this.directionInput.init();
         // this.directionInput.direction; // "down"
         this.startGameLoop();
-        this.map.startCutscene([
+
+        /*this.map.startCutscene([
+
             // <HERO> //
             { who:"hero", type:"walk", direction:"down", },
             { who:"hero", type:"walk", direction:"down", },
             // { who:"hero", type:"walk", direction:"down", },
             // <.HERO> //
-
+            
             // <NPC A> //
+            { who:"npcA", type: "walk", direction:"up", },
             { who:"npcA", type: "walk", direction:"left", },
-            { who:"npcA", type: "walk", direction:"left", },
-            { who:"npcA", type:"stand", direction:  "up", time:800, },
+            // { who:"npcA", type: "walk", direction:"left", },
+            // { who:"npcA", type: "walk", direction:"left", },
+            // { who:"npcA", type:"stand", direction:  "up", time:800, },
             // <.NPC A> //
-        ]);
+
+            // <HERO> //
+            { who:"hero", type:"stand", direction:"right", time:200, },
+            // <.HERO> //
+
+            // <TEXT MESSAGE> //
+            { type:"textMessage", text:"WHY HELLO THERE!" },
+            // <.TEXT MESSAGE> //
+
+        ]);*/
 
     }
 }
