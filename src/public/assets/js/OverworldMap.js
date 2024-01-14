@@ -12,7 +12,7 @@ class OverworldMap {
         this.upperImage        = new Image();
         this.upperImage.src    = config.upperSrc;
 
-        this.isCutscenePlaying = true;
+        this.isCutscenePlaying = false;
     }
 
     // <IMAGE: LOWER> //
@@ -210,13 +210,13 @@ window.OverworldMaps = {
                                  y:utils.withGrid(5),
             }),            
             npcC:new Person({
-                  x:utils.withGrid(9),
-                  y:utils.withGrid(6),
+                  x:utils.withGrid(10),
+                  y:utils.withGrid(8),
                 src:"./src/public/assets/img/png/characters/people/npc3.png",
                 talking:[
                     {
                         events:[
-                            { type:"textMessage", text:"You made it!", faceHero:"npcC", },
+                            { type:"textMessage", text:"You made it! This video is going to be such a good time!", faceHero:"npcC", },
                         ],
                     },
                 ],
