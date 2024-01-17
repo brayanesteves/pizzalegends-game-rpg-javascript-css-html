@@ -132,7 +132,8 @@ class Overworld {
             // <.HERO> //
 
             // <CHANGE MAP> //
-            { type:"changeMap", map:"DemoRoom" },
+            { type:"battle", },
+            // { type:"changeMap", map:"DemoRoom" },
             // <.CHANGE MAP> //
 
             // <TEXT MESSAGE> //
