@@ -14,13 +14,13 @@ window.Pizzas = {
         icon:"./src/public/assets/img/png/icons/spicy.png",
     },
     "v001": {
-        name:"Slice Samurai",
+        name:"Call Me Kale",
         type:PizzaTypes.veggie,
          src:"./src/public/assets/img/png/characters/pizzas/v001.png",
         icon:"./src/public/assets/img/png/icons/veggie.png",
     },
     "f001": {
-        name:"Slice Samurai",
+        name:"Portobello Express",
         type:PizzaTypes.fungi,
          src:"./src/public/assets/img/png/characters/pizzas/f001.png",
         icon:"./src/public/assets/img/png/icons/fungi.png",
