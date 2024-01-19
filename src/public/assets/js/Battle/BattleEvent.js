@@ -55,6 +55,7 @@ class BattleEvent {
     }
 
     init(resolve) {
+        // console.log(this.event.type);
         this[this.event.type](resolve);
     }
 }

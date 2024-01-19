@@ -5,7 +5,7 @@ window.BattleAnimations = {
         element.classList.add(animationClassName);
 
         // Remove class when animation is fully complete.
-        element.addEventListener("animationed", () => {
+        element.addEventListener("animationend", () => {
             element.classList.remove(animationClassName);
         }, { once:true });
 
