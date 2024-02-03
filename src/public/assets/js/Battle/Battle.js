@@ -17,6 +17,10 @@ class Battle {
                 // },
                  maxXp:100,
                 status:null,
+                /*status:{
+                         type:"soucy",
+                    expiresIn:1,
+                },*/
             }, this),
             "enemy1": new Combatant({
                 ...Pizzas.v001,
