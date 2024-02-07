@@ -21,6 +21,7 @@ class Battle {
                          type:"soucy",
                     expiresIn:1,
                 },*/
+                isPalyerControlled:true,
             }, this),
             "enemy1": new Combatant({
                 ...Pizzas.v001,
