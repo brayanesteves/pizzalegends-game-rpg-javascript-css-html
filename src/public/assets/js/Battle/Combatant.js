@@ -105,7 +105,7 @@ class Combatant {
         if(this.status?.type === "saucy") {
             return [
                 { type:"textMessage", text:"Feelin' saucy!", },
-                { type:"stateChange", revoer:5, onCaster:true },
+                { type:"stateChange", recover:5, onCaster:true },
             ];
         }
 

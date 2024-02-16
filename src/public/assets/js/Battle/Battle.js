@@ -16,7 +16,7 @@ class Battle {
                 //     expiresIn:3,
                 // },
                  maxXp:100,
-                status:null,
+                status: { type: "saucy" },
                 /*status:{
                          type:"soucy",
                     expiresIn:1,
@@ -26,7 +26,7 @@ class Battle {
             "enemy1": new Combatant({
                 ...Pizzas.v001,
                   team:"enemy",
-                    hp: 50,
+                    hp: 20,
                  maxHp: 50,
                     xp: 20,
                  maxXp:100,
@@ -35,7 +35,7 @@ class Battle {
             "enemy2": new Combatant({
                 ...Pizzas.f001,
                   team:"enemy",
-                    hp: 50,
+                    hp: 25,
                  maxHp: 50,
                     xp: 30,
                  maxXp:100,
@@ -47,6 +47,16 @@ class Battle {
             player:"player1",
              enemy: "enemy1",
         };
+
+        this.items = [
+            { actionId:"item_recoverStatus", instanceId:"p1", team:"player", },
+            { actionId:"item_recoverStatus", instanceId:"p2", team:"player", },
+            { actionId:"item_recoverStatus", instanceId:"p3", team:"enemy", },
+
+            // <item_recoverHp> //
+            { actionId:"item_recoverHp", instanceId:"p4", team:"player", },
+            // <.item_recoverHp> //
+        ];
     }
 
     createElement() {
@@ -54,11 +64,11 @@ class Battle {
         this.element.classList.add("Battle");
         this.element.innerHTML = `
             <div class="Battle_hero">
-                <img src="${'./src/public/assets/img/png/characters/people/hero.png'}" id="hero-image" alt="Hero" />
+                <img src="${'/src/public/assets/img/png/characters/people/hero.png'}" id="hero-image" alt="Hero" />
             </div>
 
             <div class="Battle_enemy">
-                <img src="${'./src/public/assets/img/png/characters/people/npc3.png'}" id="enemy-image" alt="Enemy" />
+                <img src="${'/src/public/assets/img/png/characters/people/npc3.png'}" id="enemy-image" alt="Enemy" />
             </div>
         `;
     }

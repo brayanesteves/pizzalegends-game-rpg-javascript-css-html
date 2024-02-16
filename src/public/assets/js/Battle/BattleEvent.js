@@ -85,7 +85,8 @@ class BattleEvent {
         resolve();
     }
 
-    submissionMenu(resolve) {
+    // <SUBMISSION: MENU> //
+    submissionMenuSingle(resolve) {
         const menu = new SubmissionMenu({
                 caster:this.event.caster,
                  enemy:this.event.enemy,
@@ -96,6 +97,19 @@ class BattleEvent {
         });
         menu.init(this.battle.element);
     }
+    submissionMenu(resolve) {
+        const menu = new SubmissionMenu({
+                caster:this.event.caster,
+                 enemy:this.event.enemy,
+                 items:this.battle.items,
+            onComplete:(submission) => {
+                // 'submission' { what move to use, who to use it on }
+                resolve(submission);
+            },
+        });
+        menu.init(this.battle.element);
+    }
+    // <SUBMISSION: MENU> //
 
     animation(resolve) {
         const fn = BattleAnimations[this.event.animation];

@@ -1,6 +1,4 @@
-const { emitKeypressEvents } = require("readline");
-
-class keyboardMenu {
+class KeyboardMenu {
     constructor() {
         this.options   = []; // Set by updater method.
         this.up        = null;
